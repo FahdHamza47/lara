@@ -10,26 +10,25 @@
       background: linear-gradient(to bottom right, #cfe0fc, #b8c4ff);
       color: #333;
       margin: 0;
-      padding: 2rem;
+      padding: 1.5rem;
       display: flex;
       flex-direction: column;
       align-items: center;
-      overflow-x: hidden;
     }
     h1 {
       color: #3f51b5;
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
+      font-size: 2.2rem;
+      margin-bottom: 1.5rem;
       text-align: center;
     }
     .buttons {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
-      margin-bottom: 2rem;
+      gap: 0.8rem;
+      margin-bottom: 1.5rem;
     }
     .buttons button {
-      padding: 1rem 2rem;
+      padding: 0.9rem 1.8rem;
       border: none;
       border-radius: 1rem;
       background-color: #fff;
@@ -44,15 +43,32 @@
     }
     .content {
       background: #fff;
-      padding: 2rem;
+      padding: 1.5rem;
       border-radius: 1.5rem;
       box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-      width: 70vw;
+      max-width: 800px;
       display: none;
       white-space: pre-wrap;
     }
     .content.active {
       display: block;
+    }
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .buttons {
+        gap: 0.6rem;
+      }
+      .buttons button {
+        padding: 0.8rem 1.5rem;
+      }
+      .content {
+        padding: 1rem;
+      }
     }
   </style>
 </head>
@@ -62,6 +78,7 @@
     <button onclick="showContent('math')">Math Group</button>
     <button onclick="showContent('language')">Language Group</button>
     <button onclick="showContent('ict')">ICT & Art Group</button>
+    <button onclick="showContent('social')">Social Group</button>
   </div>
 
   <div id="math" class="content">
@@ -94,6 +111,16 @@
     Layla Hitham<br>
     Habiba Rafik<br><br>
     The ICT & Art group is responsible for the decorations like the posters and any decorations in class, PowerPoint, the website and the QR code about Greece. All of this helps us to know a lot of information about Greece.</p>
+  </div>
+
+  <div id="social" class="content">
+    <h2>Social Group</h2>
+    <p>Members of social group:<br>
+    Rana<br>
+    Nada<br>
+    Malak<br>
+    Menna<br><br>
+    The social group researched Greece’s natural resources, history, culture, geography, and landmarks. They explored famous sites and traditions, then created a script about a war between Greece and France to show what they learned.</p>
   </div>
 
   <script>
