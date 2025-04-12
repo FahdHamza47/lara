@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Greece Project</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: linear-gradient(to bottom right, #cfe0fc, #b8c4ff);
+      color: #333;
+      margin: 0;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+    }
+    h1 {
+      color: #3f51b5;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .buttons button {
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 1rem;
+      background-color: #fff;
+      color: #3f51b5;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .buttons button:hover {
+      background-color: #e0e7ff;
+    }
+    .content {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      width: 70vw;
+      display: none;
+      white-space: pre-wrap;
+    }
+    .content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Our Greece Project</h1>
+  <div class="buttons">
+    <button onclick="showContent('math')">Math Group</button>
+    <button onclick="showContent('language')">Language Group</button>
+    <button onclick="showContent('ict')">ICT & Art Group</button>
+  </div>
+
+  <div id="math" class="content">
+    <h2>Math Group</h2>
+    <p>Members of math group:<br>
+    Kinda<br>
+    Khadija<br>
+    Rodaina<br>
+    Farida<br><br>
+    The Math Team is responsible for all the necessary calculations for the 7-day trip to Greece. We are in charge of collecting and organizing all the expenses to create a complete and accurate budget. This includes the total cost of the vacation, covering transportation, accommodation, food, activities, visa fees, and estimated travel time. Our goal is to ensure that everything is financially planned so the trip runs smoothly and stays within budget.</p>
+  </div>
+
+  <div id="language" class="content">
+    <h2>Language Group</h2>
+    <p>Language Group Members:<br>
+    Noureen<br>
+    Selen<br>
+    Retaj<br>
+    Mariam Hazem<br>
+    Fayrouz<br>
+    + Lara as an actress<br><br>
+    The language group wrote a script about six girls who take yearly trips together. This year, they were inspired to visit Greece after seeing a video in an electronics store. They thoroughly researched the trip, including budget, duration, Greek history, and common chronic illnesses. To prepare for communication, they considered the language needs of two girls who only understood English but spoke French and Arabic. The group explored whether those languages were spoken in Greece to help ensure smooth communication during their travels.</p>
+  </div>
+
+  <div id="ict" class="content">
+    <h2>ICT & Art Group</h2>
+    <p>Members of ICT & Art group:<br>
+    Lara Mohamed<br>
+    Habiba Mahmoud<br>
+    Layla Hitham<br>
+    Habiba Rafik<br><br>
+    The ICT & Art group is responsible for the decorations like the posters and any decorations in class, PowerPoint, the website and the QR code about Greece. All of this helps us to know a lot of information about Greece.</p>
+  </div>
+
+  <script>
+    function showContent(id) {
+      const contents = document.querySelectorAll('.content');
+      contents.forEach(content => content.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
+</body>
+</html>
